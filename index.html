@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <title>Agenda</title>
+</head>
+<body id="darki">
+    
+
+    <!-- <button id="open-modal"> AQUIII </button>
+    <section class="container-modal">
+            <div class="modal">
+                <button id="close"> X </button>
+                <h1> Bienvenido a tus tareas</h1>
+            </div>
+    </section> -->
+<header id="header">
+    <nav class="nav-task" id="nav"> 
+        <h1>Task <br> management</h1>
+       <!-- Botones de navegacion-->
+                <!--Modal para crear tarea-->
+      <div class="container-nav-buttons"> 
+            <button id="open-modal" class="create-modal"> + Create your Task :) </button>
+            <section class="container-modal">
+                    <div class="modal">
+                        <div>
+                        <button id="close"> X </button>
+                        </div>
+                        <div>
+                            <button> 
+                                <i class="fa-sharp fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                        <h1> Create your task </h1>
+                        <form class="form">
+                            <input type="text" id="title" placehold>
+                            <span id="title-error" class="errors"></span> 
+                            <select id="state">
+                                <option disabled selected>Select a state</option>
+                                <option value="To Do"> To Do</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Complete"> Complete</option>
+                            </select>
+                            <span id="state-errors" class="errors"></span>
+                            <button type="submit" class="submit">Create 😀</button>
+                            
+                        </form>
+                        <span id="formError"></span>
+                    </div>
+
+                    
+            </section>          
+                    <!--Input para buscar la tarea - Funcion FilterJS-->
+            <div class="input-search">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i><!-- Ver como meterlo adentro del input-->            
+                    <input type="text" value="Search Here your task" style="border: none;">  <!--Preguntarle al profe como le saco al input el borde-->           
+            </div>
+            
+                    <!--Boton de modo oscuro :)-->
+            <button class="navegacion-btn-switch active" id="switch" aria-label="Boton cambiar a modo oscuro">
+                <span><i class="fa-solid fa-sun sol"></i></span> 
+                <span><i class="fa-solid fa-moon luna"></i></span>                       
+            </button>                          
+
+        </div>
+    </nav>
+</header>
+
+<main class="container-columns">
+    <div class="to-do">
+      <h1>hola</h1>
+    </div>
+    <div class="in-progress">
+        <h1>hola</h1>
+    </div>
+    <div class="complete">
+        <h1>hola</h1>
+    </div>
+
+
+</main>
+
+    
+
+
+
+    
+       
+
+
+
+
+    <script src="./checkList.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+
+/* ***** Botones de navegacion Modo oscuro ***/
+    /* ***** Boton Modal ***/
+body .container-modal {
+    width: 100vh;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: block;
+    /* background-color: rgb(201, 246, 246); */
+    pointer-events: none;
+    opacity: 0;
+    color: white;
+}
+
+body .container-modal .modal{
+    background-color: rgb(187, 187, 183);
+    padding: 6rem;
+    height: 20rem;
+    width: 10rem;
+    border: 1px rgb(80, 170, 215);
+    border-radius: 45px;
+    position: absolute;
+    top: 25%;   
+    box-shadow: 8px 0px 10px 0 rgb(119, 119, 119);
+}
+
+body .show-modal{  
+    pointer-events: all;
+    opacity: 1;
+}
+
+
+.nav-task{
+    /* background-color: rgb(180, 25, 25); */
+    display: flex;
+    height: 8em;
+}
+.container-nav-buttons{
+    /* background-color: pink; */
+    /* margin: auto; */
+    margin-left:50%;
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    align-items: center;
+   
+}
+
+.create-modal{
+    height: 3em;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 1px 0px 2px 0px rgb(168, 168, 168); 
+    border: gray;
+}
+
+.create-modal:hover{
+    background-color: rgb(235, 255, 233);
+}
+
+
+/* ***** Boton- input buscador de tareas Preguntar al profe como hago para estilar mejor el input ***/
+.input-search {   
+    height: 2.5em;
+    width: 15em;
+    margin: 5em;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 1px 0px 2px 0px rgb(168, 168, 168); 
+    border: rgb(180, 87, 87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-search:hover{
+    background-color: rgb(181, 184, 183);
+    transition: .3s ease all;
+}
+
+
+/* ***** Boton Modo oscuro ***/
+
+.dark{
+    background-color: rgb(54, 54, 54) !important;  
+    color: white !important;
+}
+
+.dark-medium{
+    background-color: rgb(61, 61, 61) !important;
+    color: white;
+}
+
+.dark-ligth{
+    background-color: rgb(73, 73, 73) !important;
+    color: white;
+}
+
+.dark-input{
+    background-color: rgb(92, 92, 92) !important;
+    color: white !important;
+}
+
+.dark-hover:hover{
+    background-color: rgb(116, 116, 116) !important;
+}
+
+.oculto{
+    display: none;
+}
+
+.navegacion-btn-switch{
+    display: flex;
+    background-color: rgb(72, 70, 70);
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;    
+}
+
+.navegacion-btn-switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: white;
+}
+
+.navegacion-btn-switch::after{
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    top: 10%;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 1px 0px 3px 3px rgb(255, 202, 202);  
+}
+
+.navegacion-btn-switch.active{
+    background-color: orange;
+    color: black;
+}
+
+.navegacion-btn-switch.active::after{
+    left: unset;
+    right: 0;
+}
+
+/* ***** main columnas ***/
+.container-columns{
+   background-color: black;
+   display: flex;    
+   width: 100%;
+
+}
+.to-do{
+    background-color: red;    
+   width: 30%;
+   margin: 2%;
+}
+.in-progress{
+    background-color: rgb(13, 255, 0);    
+   width: 30%;
+   margin: 2%;
+}
+.complete{
+    background-color: rgb(0, 17, 255);   
+   width: 30%;
+   margin: 2%;
+}
