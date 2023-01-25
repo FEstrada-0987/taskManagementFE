@@ -1,3 +1,40 @@
+body, html{
+    height: 100%;
+    margin: 1px;  
+    /* background: url(smile_Background.png); */
+    background-color: rgb(20, 147, 105);
+    background-size: 100%;
+    font-family: 'Source Serif Pro', serif;
+}
+.h1{
+    margin-left: 3rem;
+    color: white;
+    font-size: 3rem;
+    }
+    #dateTxt{
+        margin-left: 3rem;
+        color: white;
+        
+    }
+.container-button b{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .b{
+    background-color: aquamarine;
+ }
+.trash-edit{
+    background-color: yellow;
+}
+ .trash-button{
+    background-color: rgb(20, 63, 100);
+ }
+ .download-button{
+    background-color: pink;
+ }
+
 
 /* ***** Botones de navegacion Modo oscuro ***/
     /* ***** Boton Modal ***/
@@ -35,11 +72,12 @@ body .show-modal{
     /* background-color: rgb(180, 25, 25); */
     display: flex;
     height: 8em;
+    
 }
 .container-nav-buttons{
     /* background-color: pink; */
     /* margin: auto; */
-    margin-left:50%;
+    margin-left:30em;
     height: 4em;
     display: flex;
     flex-direction: row;
@@ -54,10 +92,14 @@ body .show-modal{
     transition: .3s ease all;
     box-shadow: 1px 0px 2px 0px rgb(168, 168, 168); 
     border: gray;
+    color: white;
+    font-size: 15px;
+    background-color: transparent;
+    width: 12rem;
 }
 
 .create-modal:hover{
-    background-color: rgb(235, 255, 233);
+    background-color: rgb(1, 15, 172);
 }
 
 
@@ -74,11 +116,14 @@ body .show-modal{
     justify-content: center;
     align-items: center;
 }
-
-.input-search:hover{
-    background-color: rgb(181, 184, 183);
-    transition: .3s ease all;
+.input-search-write{
+    border: none;
+    margin: auto;
+    background-color: transparent;
+    outline: none;
+    color: white;
 }
+
 
 
 /* ***** Boton Modo oscuro ***/
@@ -157,23 +202,22 @@ body .show-modal{
 
 /* ***** main columnas ***/
 .container-columns{
-   background-color: black;
-   display: flex;    
+   /* background-color: black; */
+   display: flex;      
    width: 100%;
+   height: 45rem;
+   margin-top: 2em;
 
 }
-.to-do{
-    background-color: red;    
-   width: 30%;
-   margin: 2%;
-}
-.in-progress{
-    background-color: rgb(13, 255, 0);    
-   width: 30%;
-   margin: 2%;
-}
-.complete{
-    background-color: rgb(0, 17, 255);   
-   width: 30%;
-   margin: 2%;
+.col-1, .col-2, .col-3{
+   
+   width: 33%;
+   margin: 4em;
+   border-radius: 15px;
+   box-shadow:1px 0px 3px 3px rgb(222, 222, 222); 
+   font-family: 'Source Serif Pro', serif;
+   color: white;
+   display: flex;
+   justify-content: center;
+   
 }

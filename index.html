@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lexend+Deca:wght@500&family=Montserrat:wght@300&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     
     
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
@@ -24,24 +26,39 @@
     </section> -->
 <header id="header">
     <nav class="nav-task" id="nav"> 
-        <h1>Task <br> management</h1>
+        <div>
+            <div id="dateTxt"></div>  
+        <h1 class="h1">Task <br> management</h1>
+        </div> 
        <!-- Botones de navegacion-->
                 <!--Modal para crear tarea-->
       <div class="container-nav-buttons"> 
             <button id="open-modal" class="create-modal"> + Create your Task :) </button>
             <section class="container-modal">
                     <div class="modal">
-                        <div>
-                        <button id="close"> X </button>
-                        </div>
-                        <div>
-                            <button> 
-                                <i class="fa-sharp fa-solid fa-trash"></i>
-                            </button>
-                        </div>
+                       <div class="container-button b">
+                            <div class="close-button">
+                            <button id="close"> X </button>
+                            </div>
+                            <div class="trash-button b">
+                                <button id="trash"> 
+                                    <i class="fa-sharp fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                            <div class="trash-edit b">
+                                <button id="edit"> 
+                                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                                </button>                           
+                            </div>
+                            <div class="download-button b">
+                                <button>
+                                    <i class="fa-sharp fa-solid fa-square-arrow-down"></i>
+                                </button>
+                            </div>
+                    </div> 
                         <h1> Create your task </h1>
                         <form class="form">
-                            <input type="text" id="title" placehold>
+                            <input type="text" id="title" name ="taskText" placehold>
                             <span id="title-error" class="errors"></span> 
                             <select id="state">
                                 <option disabled selected>Select a state</option>
@@ -50,10 +67,11 @@
                                 <option value="Complete"> Complete</option>
                             </select>
                             <span id="state-errors" class="errors"></span>
-                            <button type="submit" class="submit">Create 😀</button>
+                            <button type="submit" class="submit" >Create 😀</button>
                             
                         </form>
                         <span id="formError"></span>
+                        <div id="divTask"></div>
                     </div>
 
                     
@@ -61,7 +79,7 @@
                     <!--Input para buscar la tarea - Funcion FilterJS-->
             <div class="input-search">
                 <i class="fa-sharp fa-solid fa-magnifying-glass"></i><!-- Ver como meterlo adentro del input-->            
-                    <input type="text" value="Search Here your task" style="border: none;">  <!--Preguntarle al profe como le saco al input el borde-->           
+                    <input class="input-search-write" type="text" value="Search Here your task">  <!-- preguntarle al profe como hago q cuando hago clic se vaya lo escrito-->  
             </div>
             
                     <!--Boton de modo oscuro :)-->
@@ -75,18 +93,18 @@
 </header>
 
 <main class="container-columns">
-    <div class="to-do">
-      <h1>hola</h1>
+    <div class="col-1" id="toDo">
+      <h1>TO DO</h1>
     </div>
-    <div class="in-progress">
-        <h1>hola</h1>
+    <div class="col-2">
+        <h1>IN PROGRESS</h1>
     </div>
-    <div class="complete">
-        <h1>hola</h1>
-    </div>
+    <div class="col-3">
+        <h1>COMPLETE</h1>
+    </div> 
 
 
-</main>
+
 
     
 
