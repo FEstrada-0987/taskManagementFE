@@ -2,7 +2,7 @@ body, html{
     height: 100%;
     margin: 1px;  
     /* background: url(smile_Background.png); */
-    background-color: rgb(20, 147, 105);
+    background-color: rgb(50, 88, 131);
     background-size: 100%;
     font-family: 'Source Serif Pro', serif;
 }
@@ -47,11 +47,11 @@ body .container-modal {
     /* background-color: rgb(201, 246, 246); */
     pointer-events: none;
     opacity: 0;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 body .container-modal .modal{
-    background-color: rgb(187, 187, 183);
+    background-color: rgb(255 255 255);
     padding: 6rem;
     height: 20rem;
     width: 10rem;
@@ -154,6 +154,7 @@ body .show-modal{
 
 .oculto{
     display: none;
+    
 }
 
 .navegacion-btn-switch{
@@ -164,6 +165,7 @@ body .show-modal{
     position: relative;
     cursor: pointer;
     display: flex;    
+    
 }
 
 .navegacion-btn-switch span{
@@ -173,6 +175,7 @@ body .show-modal{
     display: block;
     background: none;
     color: white;
+
 }
 
 .navegacion-btn-switch::after{
@@ -187,12 +190,14 @@ body .show-modal{
     right: unset;
     border-radius: 100px;
     transition: .3s ease all;
-    box-shadow: 1px 0px 3px 3px rgb(255, 202, 202);  
+    box-shadow: 1px 0px 3px 3px rgb(255, 202, 202); 
+    
 }
 
 .navegacion-btn-switch.active{
     background-color: orange;
     color: black;
+    
 }
 
 .navegacion-btn-switch.active::after{

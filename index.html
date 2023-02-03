@@ -58,17 +58,18 @@
                     </div> 
                         <h1> Create your task </h1>
                         <form class="form">
-                            <input type="text" id="title" name ="taskText" placehold>
-                            <span id="title-error" class="errors"></span> 
-                            <select id="state">
-                                <option disabled selected>Select a state</option>
-                                <option value="To Do"> To Do</option>
-                                <option value="In Progress">In Progress</option>
-                                <option value="Complete"> Complete</option>
-                            </select>
-                            <span id="state-errors" class="errors"></span>
-                            <button type="submit" class="submit" >Create 😀</button>
                             
+                                <input type="text" id="title" name ="taskText" placehold>
+                                <span id="title-error" class="errors"></span> 
+                                <select id="state">
+                                    <option disabled selected>Select a state</option>
+                                    <option value="To Do">To Do</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Complete"> Complete</option>
+                                </select>
+                                <span id="state-errors" class="errors"></span>
+                                <button type="submit" class="submit" >Create 😀</button>
+                        
                         </form>
                         <span id="formError"></span>
                         <div id="divTask"></div>
@@ -92,28 +93,15 @@
     </nav>
 </header>
 
-<main class="container-columns">
     <div class="col-1" id="toDo">
-      <h1>TO DO</h1>
+      <!-- <h1>TO DO</h1> -->
     </div>
-    <div class="col-2">
+    <div class="col-2" id="inProgress">
         <h1>IN PROGRESS</h1>
     </div>
-    <div class="col-3">
+    <div class="col-3" id="complete">
         <h1>COMPLETE</h1>
-    </div> 
-
-
-
-
-    
-
-
-
-    
-       
-
-
+    </div>    
 
 
     <script src="./checkList.js"></script>
