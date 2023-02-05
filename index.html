@@ -3,107 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lexend+Deca:wght@500&family=Montserrat:wght@300&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    
-    
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">    
+    <link rel="stylesheet" href="./style.css">  
     <title>Agenda</title>
 </head>
-<body id="darki">
-    
+<body id="darki" cz-shortcut-listen="true">
+    <!--Nav con bulma-->
+<header id="header"> 
+    <nav id="nav" class="navbar is-primary" role="navigation" aria-label="main navigation">
+            <div class="navbar-menu">
+            <div class="navbar-start">
+                 <h1 class="title">Task🤍</h1>             
+            </div>                             
+                          
 
-    <!-- <button id="open-modal"> AQUIII </button>
-    <section class="container-modal">
-            <div class="modal">
-                <button id="close"> X </button>
-                <h1> Bienvenido a tus tareas</h1>
-            </div>
-    </section> -->
-<header id="header">
-    <nav class="nav-task" id="nav"> 
-        <div>
-            <div id="dateTxt"></div>  
-        <h1 class="h1">Task <br> management</h1>
-        </div> 
-       <!-- Botones de navegacion-->
-                <!--Modal para crear tarea-->
-      <div class="container-nav-buttons"> 
-            <button id="open-modal" class="create-modal"> + Create your Task :) </button>
-            <section class="container-modal">
-                    <div class="modal">
-                       <div class="container-button b">
-                            <div class="close-button">
-                            <button id="close"> X </button>
-                            </div>
-                            <div class="trash-button b">
-                                <button id="trash"> 
-                                    <i class="fa-sharp fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                            <div class="trash-edit b">
-                                <button id="edit"> 
-                                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
-                                </button>                           
-                            </div>
-                            <div class="download-button b">
-                                <button>
-                                    <i class="fa-sharp fa-solid fa-square-arrow-down"></i>
-                                </button>
-                            </div>
-                    </div> 
-                        <h1> Create your task </h1>
-                        <form class="form">
-                            
-                                <input type="text" id="title" name ="taskText" placehold>
-                                <span id="title-error" class="errors"></span> 
-                                <select id="state">
-                                    <option disabled selected>Select a state</option>
-                                    <option value="To Do">To Do</option>
-                                    <option value="In Progress">In Progress</option>
-                                    <option value="Complete"> Complete</option>
-                                </select>
-                                <span id="state-errors" class="errors"></span>
-                                <button type="submit" class="submit" >Create 😀</button>
-                        
-                        </form>
-                        <span id="formError"></span>
-                        <div id="divTask"></div>
-                    </div>
+                           <button class="button is-danger is-rounded is-hovered" id="create-modal">Click Here🤍NewTask</button>
+                            <!-- <section class = "contain-modalCreate"> -->
+                                    <div class="modal">
+                                        <div class="modal-background"></div>
+                                        <div class="modal-content has-background-white py-5 px-5">
+                                
+                                                <div class="field">
+                                                    <label class="label">Task:Name😀</label>
+                                                    <div class="control">
+                                                    <input class="input is-danger" type="text" placeholder="e.g Meeting Leadership">
+                                                    </div>
+                                                    <p class="help is-danger"> This field is required</p>
+                                                </div>               
+                                                
+                                
+                                                <div class="field">
+                                                    <label class="label">State your Task🤍</label>
+                                                    <div class="control">
+                                                    <div class="select">
+                                                        <select>
+                                                        <option value="Select One">Select One</option>  
+                                                        <option value="To Do">To Do</option>
+                                                        <option value="In Progress">In Progress</option>
+                                                        <option value="All Done">All Done</option>
+                                                        </select>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                        
+                                                <div class="field">
+                                                    <label class="label">Message</label>
+                                                    <div class="control">
+                                                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                                                    </div>
+                                                </div>                   
+                                        
+                                        
+                                                <div class="field is-grouped">
+                                                    <div class="control">
+                                                        <button class="button is-link">Submit</button>
+                                                    </div>
+                                                    <div class="control">
+                                                        <button id="close-Modal"class="button is-link is-light">Cancel</button>
+                                                    </div>
+                                                </div>
+                                   
+                                        </div>
+                                    </div>
+                                 
+                            <!-- </section> CIERRA TODO LO QUE ENGLOBA AL MODAL -->
 
-                    
-            </section>          
-                    <!--Input para buscar la tarea - Funcion FilterJS-->
-            <div class="input-search">
-                <i class="fa-sharp fa-solid fa-magnifying-glass"></i><!-- Ver como meterlo adentro del input-->            
-                    <input class="input-search-write" type="text" value="Search Here your task">  <!-- preguntarle al profe como hago q cuando hago clic se vaya lo escrito-->  
-            </div>
-            
-                    <!--Boton de modo oscuro :)-->
-            <button class="navegacion-btn-switch active" id="switch" aria-label="Boton cambiar a modo oscuro">
-                <span><i class="fa-solid fa-sun sol"></i></span> 
-                <span><i class="fa-solid fa-moon luna"></i></span>                       
-            </button>                          
+                            <div class="navbar-end">
+                                <div class="navbar-item">
+                                    <div class="buttons field is-grouped"> 
+                                        <p class="control">
+                                            <button class="navegacion-btn-switch active" id="switch" aria-label="Boton cambiar a modo oscuro">
+                                                <span><i class="fa-solid fa-sun sol"></i></span> <!--MODOOSCURO-->
+                                                <span><i class="fa-solid fa-moon luna"></i></span>   <!--MODOOSCURO-->                    
+                                            </button>  
+                                         </p>
+                                        <p class="control">                   
+                                        <input class="input is-warning" type="text" placeholder="Search your Task 💜"><!--INPUT BUSCAR TAREA-->
+                                        </p> 
+                                    </div>                     
+                                </div>   <!--divs que cierran el nav bar end-->
+                             </div> 
+           <!--divs que cierran el nav bar end-->
+</nav>
+<!-- ACA ABAJO CREAR LOS DIV PARA PINTAR LAS TAREAS HECHAS EN EL MODAL FORMULARIO-->
 
-        </div>
-    </nav>
-</header>
 
-    <div class="col-1" id="toDo">
-      <!-- <h1>TO DO</h1> -->
-    </div>
+
+
+      
+            <!---BOORRRAAAR TODO LO Q VIENE POR ACA ABAJO-->         
+
+
+    <!-- <div class="col-1" id="toDo">
+      <!- <h1>TO DO</h1> -->
+    <!--</div>
     <div class="col-2" id="inProgress">
         <h1>IN PROGRESS</h1>
     </div>
     <div class="col-3" id="complete">
         <h1>COMPLETE</h1>
-    </div>    
+    </div>     -->
 
-
+</header>
     <script src="./checkList.js"></script>
+
 </body>
 </html>
