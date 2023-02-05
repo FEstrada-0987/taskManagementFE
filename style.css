@@ -1,4 +1,5 @@
             /* ***** Boton Modo oscuro ***/
+            @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
             .dark{
                 background-color: rgb(54, 54, 54) !important;  
                 color: white !important;
