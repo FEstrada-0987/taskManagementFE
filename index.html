@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style.css">  
     <title>Agenda</title>
 </head>
-<body id="darki" cz-shortcut-listen="true">
+<body id="darki">
     <!--Nav con bulma-->
 
     <nav id="nav" class="navbar is-primary is-flex-mobile" role="navigation" aria-label="main navigation">
@@ -82,7 +82,7 @@
                                         </div>
                                     </div>
                                 </form>
-                            <!-- </section> CIERRA TODO el frmulario LO QUE ENGLOBA AL MODAL -->
+                            <!-- Hasta se CIERRA TODO el frmulario LO QUE ENGLOBA AL MODAL -->
 
                             <div class="navbar-end is-flex-mobile">
                                 <div class="navbar-item is-flex-mobile">
@@ -94,7 +94,7 @@
                                             </button>  
                                          </p>
                                         <p class="control">                   
-                                        <input class="input is-warning" type="text" placeholder="Search your Task 💜"><!--INPUT BUSCAR TAREA-->
+                                        <input id="search-Task"class="input is-warning" type="text" placeholder="Search your Task 💜"><!--INPUT BUSCAR TAREA-->
                                         </p> 
                                     </div>                     
                                 </div>   <!--divs que cierran el nav bar end-->
@@ -136,8 +136,8 @@
         <td>dandolo todo</td>   
         <td>
             <div class="buttons">
-                <button class="button is-primary">Primary</button>
-                <button class="button is-warning">Link</button>
+                <button class="button is-primary edit">Primary</button>
+                <button class="button is-warning delete">Link</button>
               </div> 
         </td>   
       </tr>
