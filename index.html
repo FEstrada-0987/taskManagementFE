@@ -12,54 +12,67 @@
 </head>
 <body id="darki" cz-shortcut-listen="true">
     <!--Nav con bulma-->
-<header id="header"> 
-    <nav id="nav" class="navbar is-primary" role="navigation" aria-label="main navigation">
+
+    <nav id="nav" class="navbar is-primary is-flex-mobile" role="navigation" aria-label="main navigation">
             <div class="navbar-menu">
             <div class="navbar-start">
-                 <h1 class="title">Task🤍</h1>             
+                 <h1 class="title is-flex-mobile">Task🤍</h1>             
             </div>                             
                           
 
-                           <button class="button is-danger is-rounded is-hovered" id="create-modal">Click Here🤍NewTask</button>
-                            <!-- <section class = "contain-modalCreate"> -->
+                           <button class="button is-danger is-rounded is-hovered is-flex-mobile" id="create-modal">Click Here🤍NewTask</button>
+                            <!-- MODAL-FORMULARIO -->
+                                <form id="formModal"> 
                                     <div class="modal">
                                         <div class="modal-background"></div>
                                         <div class="modal-content has-background-white py-5 px-5">
                                 
                                                 <div class="field">
                                                     <label class="label">Task:Name😀</label>
-                                                    <div class="control">
-                                                    <input class="input is-danger" type="text" placeholder="e.g Meeting Leadership">
+                                                    <div class="control"> <!--//Aca abajo el input para escrbir el nombre de la tarea-->
+                                                    <input id="task-Name"class="input is-danger" type="text" placeholder="e.g Meeting Leadership" name="nameTask">
                                                     </div>
                                                     <p class="help is-danger"> This field is required</p>
                                                 </div>               
                                                 
                                 
                                                 <div class="field">
-                                                    <label class="label">State your Task🤍</label>
+                                                    <label class="label">State your Task🚥</label>
                                                     <div class="control">
-                                                    <div class="select">
-                                                        <select>
+                                                    <div id= "select-state" name="state" class="select">
+                                                        <select> <!--/tdas las opciones-->
                                                         <option value="Select One">Select One</option>  
-                                                        <option value="To Do">To Do</option>
-                                                        <option value="In Progress">In Progress</option>
-                                                        <option value="All Done">All Done</option>
+                                                        <option value="To Do" id="toDo">To Do</option>
+                                                        <option value="In Progress" id="inProgress">In Progress</option>
+                                                        <option value="All Done" id="allDone">All Done</option>
                                                         </select>
                                                     </div>
                                                     </div>
                                                 </div>
                                         
                                                 <div class="field">
-                                                    <label class="label">Message</label>
-                                                    <div class="control">
-                                                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                                                    <label class="label">Description Task✏️</label>
+                                                    <div class="control"><!--//ACA ABAJO el txt tarea para escribir-->
+                                                    <textarea id="description"name="Description" class="textarea" placeholder="1)Learnings and feedback"></textarea>
                                                     </div>
                                                 </div>                   
-                                        
+                                                <div class="file is-small is-info is-right"> <!--//upload button-->
+                                                    <label class="file-label">
+                                                      <input id="resume"class="file-input" type="file" name="resume"> <!--//upload button-->
+                                                      <span class="file-cta">
+                                                        <span class="file-icon">
+                                                            <i class="fas fa-cloud-upload-alt"></i>
+                                                        </span>
+                                                        <span class="file-label">
+                                                          upload file…
+                                                        </span>
+                                                      </span>
+                                                    </label>
+                                                  </div>
                                         
                                                 <div class="field is-grouped">
                                                     <div class="control">
-                                                        <button class="button is-link">Submit</button>
+                                                        <button class="button is-link" id="createTask">Submit</button>
                                                     </div>
                                                     <div class="control">
                                                         <button id="close-Modal"class="button is-link is-light">Cancel</button>
@@ -68,11 +81,11 @@
                                    
                                         </div>
                                     </div>
-                                 
-                            <!-- </section> CIERRA TODO LO QUE ENGLOBA AL MODAL -->
+                                </form>
+                            <!-- </section> CIERRA TODO el frmulario LO QUE ENGLOBA AL MODAL -->
 
-                            <div class="navbar-end">
-                                <div class="navbar-item">
+                            <div class="navbar-end is-flex-mobile">
+                                <div class="navbar-item is-flex-mobile">
                                     <div class="buttons field is-grouped"> 
                                         <p class="control">
                                             <button class="navegacion-btn-switch active" id="switch" aria-label="Boton cambiar a modo oscuro">
@@ -91,24 +104,47 @@
 <!-- ACA ABAJO CREAR LOS DIV PARA PINTAR LAS TAREAS HECHAS EN EL MODAL FORMULARIO-->
 
 
-
-
-      
-            <!---BOORRRAAAR TODO LO Q VIENE POR ACA ABAJO-->         
-
-
-    <!-- <div class="col-1" id="toDo">
-      <!- <h1>TO DO</h1> -->
-    <!--</div>
-    <div class="col-2" id="inProgress">
-        <h1>IN PROGRESS</h1>
+<!-- <section class="contain-tareas"">
+          
+    <div class="columns is-mobile">
+        <div class="column">
+            <h1 class="title is-flex-mobile">TO DO</h1>
+        </div>
+        <div class="column">
+            <h1  class="title is-flex-mobile">IN PROGRESS</h1>
+        </div>
+        <div class="column">
+            <h1 class="title is-flex-mobile">COMPLETE</h1>
+        </div>  
     </div>
-    <div class="col-3" id="complete">
-        <h1>COMPLETE</h1>
-    </div>     -->
 
-</header>
-    <script src="./checkList.js"></script>
+</section>    -->
+
+<section id="tableFormat">
+<table class="table" id="transactionTable">
+  <thead>
+    <tr>
+      <th>TASK Name😀</th>      
+      <th>SELECT STATE</th>
+      <th>DESCRIPTION</th> 
+      <th>ACTIONS</th>   
+    </tr>
+    
+    <tr>
+        <td>Programando a full😀</td>      
+        <td>en progreso</td>
+        <td>dandolo todo</td>   
+        <td>
+            <div class="buttons">
+                <button class="button is-primary">Primary</button>
+                <button class="button is-warning">Link</button>
+              </div> 
+        </td>   
+      </tr>
+</thead>
+</table>
+</section>
+     <script src="./checkList.js"></script>
 
 </body>
 </html>
