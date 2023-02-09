@@ -1,13 +1,13 @@
 
 let allTask = []
- 
- window.addEventListener("load", () => { 
+
+ window.addEventListener("load", () => {
 
     // Modal
      const $openModal = document.querySelector('#create-modal'); //bton id
      const $modalCreate = document.querySelector('.modal'); //contiene todo clase
      const $closeModalCreate = document.querySelector('#close-Modal'); //id boton cancel
-    //-------> Formulario 
+    //-------> Formulario
     const form = document.getElementById('formModal');
     const taskName = document.getElementById('task-Name');
     const selectState = document.getElementById('select-state');
@@ -26,7 +26,7 @@ let allTask = []
 
     //const ids = uuidv4();
 
-   
+
     // Modo oscuro variable
      const btnSwitch = document.querySelector('#switch');
 
@@ -34,10 +34,10 @@ let allTask = []
      //-->Modo Oscuro funcion
      btnSwitch.addEventListener('click', () => {
          document.getElementById('darki').classList.toggle('dark');
-         document.getElementById('nav').classList.toggle('dark'); 
+         document.getElementById('nav').classList.toggle('dark');
          document.getElementById('tableFormat').classList.toggle('dark');
 
-        btnSwitch.classList.toggle('active');  
+        btnSwitch.classList.toggle('active');
      });
 
 
@@ -47,12 +47,11 @@ let allTask = []
       });
     $closeModalCreate.addEventListener('click', () => {
         $modalCreate.classList.remove('is-active');
-     });  
-        
- 
-            
+     });
+
+
+
     form.addEventListener('submit', function (e) {
-    //      console.log(e)
         e.preventDefault();
         allTask.push({
             title:taskName.value,
@@ -60,22 +59,22 @@ let allTask = []
             description: descriptionT.value})
         sectionAllTask.innerHTML = ""
         allTask.forEach((info) => {
-                sectionAllTask.innerHTML = `<table class="table" id="transactionTable">
+                sectionAllTask.innerHTML += `<table class="table" id="transactionTable">
                                <thead>
                                  <tr>
-                                   <th>TASK Name😀</th>      
+                                   <th>TASK Name😀</th>
                                    <th>SELECT STATE</th>
-                                   <th>DESCRIPTION</th> 
-                                   <th>ACTIONS</th>   
-                                 </tr>                
+                                   <th>DESCRIPTION</th>
+                                   <th>ACTIONS</th>
+                                 </tr>
                                  <tr>
-                                     <td>${taskName.value}</td>      
+                                     <td>${taskName.value}</td>
                                      <td>${selectState.value}</td>
-                                     <td>${descriptionT.value}</td>   
+                                     <td>${descriptionT.value}</td>
                                     <td>
                                          <div class="buttons">
-                                             <button class="button is-primary edit">Editar</button>
-                                             <button class="button is-warning delete">Eliminar</button>
+                                             <button class="button is-primary edit" id=${info.id}>Edit</button>
+                                             <button class="button is-warning" id=${info.id}>Delete</button>
                                              <div class="file is-small is-info is-right"> <!--//upload button-->
                                                  <label class="file-label">
                                                    <input id="resume"class="file-input" type="file" name="resume"> <!--//upload button-->
@@ -89,23 +88,37 @@ let allTask = []
                                                    </span>
                                                  </label>
                                                </div>
-                                           </div> 
-                                     </td>   
+                                           </div>
+                                     </td>
                                    </tr>
                              </thead>
-                             </table>`                 
-         })          
+                             </table>`
+         })
+      })// cierre subtmit
+                //  const buttonDelete = document.querySelectorAll('.button is-warning delete');
+                //  buttonDelete.forEach(btn => {
+                //               btn.addEventListener("click", (e) => {
+                //                        allTask = allTask.filter( taskis => taskis.id !== Number(e.target.id))
 
-        })
+                //               })
+                //             }) // ok cierres botn delete
+                //  }
+
+                //  const buttonEdit = document.querySelectorAll('.button is-primary edit');
+                //  buttonDelete.forEach(edit => {
+                //               edit.addEventListener("click", (e) => {
+
+                //                        allTask = allTask.filter( taskis => taskis.id !== Number(e.target.id))
+
+                //               })
+                //             }) // ok cierres botn delete
+                 //}
+
+})// cierra window load
 
 
-  })
-         
-        
-      
-
-
-   
-
-
-
+//FILTER TASK INTENTADO
+//  searchTask  = (str) => {
+//   const serching = allTask.filter(t => t.Titulo.includes(str))
+//   return serching
+// }

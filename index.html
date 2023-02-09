@@ -71,13 +71,72 @@
                                                     </div>
                                                     <div class="control">
                                                         <button id="close-Modal"class="button is-link is-light">Cancel</button>
-                                                    </div>
+                                                    </div>                                                    
                                                 </div>
                                    
                                         </div>
                                     </div>
                                 </form>
-                            <!-- Hasta se CIERRA TODO el frmulario LO QUE ENGLOBA AL MODAL -->
+                            <!-- Hasta se CIERRA TODO el frmulario LO QUE ENGLOBA AL crear MODAL  <div>
+                                                        <button type="submit" class="submit">Edit</button>
+                                                    </div>-->
+
+
+<!-- DIV PARA EDITAR MODAL DE aca para abajo-->
+<section class = "Contain-modalEdit"></section>
+<form id="formModal"> 
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+
+                <div class="field">
+                    <label class="label">Task:Name😀</label>
+                    <div class="control"> <!--//Aca abajo el input para escrbir el nombre de la tarea-->
+                    <input id="task-Name"class="input is-danger" type="text" placeholder="e.g Meeting Leadership" name="nameTask">
+                    </div>
+                    <p class="help is-danger"> This field is required</p>
+                </div>               
+                
+
+                <div class="field">
+                    <label class="label">State your Task🚥</label>
+                    <div class="control">
+                    <div name="state" class="select">
+                        <select id="select-state"> <!--/tdas las opciones-->
+                        <option value="Select One">Select One</option>  
+                        <option value="To Do" id="toDo">To Do</option>
+                        <option value="In Progress" id="inProgress">In Progress</option>
+                        <option value="All Done" id="allDone">All Done</option>
+                        </select>
+                    </div>
+                    </div>
+                </div>
+        
+                <div class="field">
+                    <label class="label">Description Task✏️</label>
+                    <div class="control"><!--//ACA ABAJO el txt tarea para escribir-->
+                    <textarea id="description"name="Description" class="textarea" placeholder="1)Learnings and feedback"></textarea>
+                    </div>
+                </div>                   
+                
+        
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link" id="createTask">Submit</button>
+                    </div>
+                    <div class="control">
+                        <button id="close-Modal"class="button is-link is-light">Cancel</button>
+                    </div>                                                    
+                </div>
+   
+        </div>
+    </div>
+</form>
+
+
+
+
+
 
                             <div class="navbar-end is-flex-mobile">
                                 <div class="navbar-item is-flex-mobile">
