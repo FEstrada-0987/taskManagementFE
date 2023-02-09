@@ -18,7 +18,14 @@
             <div class="navbar-start">
                  <h1 class="title is-flex-mobile">Task🤍</h1>             
             </div>                             
-                          
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+                     
 
                            <button class="button is-danger is-rounded is-hovered is-flex-mobile" id="create-modal">Click Here🤍NewTask</button>
                             <!-- MODAL-FORMULARIO -->
@@ -39,8 +46,8 @@
                                                 <div class="field">
                                                     <label class="label">State your Task🚥</label>
                                                     <div class="control">
-                                                    <div id= "select-state" name="state" class="select">
-                                                        <select> <!--/tdas las opciones-->
+                                                    <div name="state" class="select">
+                                                        <select id="select-state"> <!--/tdas las opciones-->
                                                         <option value="Select One">Select One</option>  
                                                         <option value="To Do" id="toDo">To Do</option>
                                                         <option value="In Progress" id="inProgress">In Progress</option>
@@ -56,19 +63,7 @@
                                                     <textarea id="description"name="Description" class="textarea" placeholder="1)Learnings and feedback"></textarea>
                                                     </div>
                                                 </div>                   
-                                                <div class="file is-small is-info is-right"> <!--//upload button-->
-                                                    <label class="file-label">
-                                                      <input id="resume"class="file-input" type="file" name="resume"> <!--//upload button-->
-                                                      <span class="file-cta">
-                                                        <span class="file-icon">
-                                                            <i class="fas fa-cloud-upload-alt"></i>
-                                                        </span>
-                                                        <span class="file-label">
-                                                          upload file…
-                                                        </span>
-                                                      </span>
-                                                    </label>
-                                                  </div>
+                                                
                                         
                                                 <div class="field is-grouped">
                                                     <div class="control">
@@ -102,7 +97,42 @@
            <!--divs que cierran el nav bar end-->
 </nav>
 <!-- ACA ABAJO CREAR LOS DIV PARA PINTAR LAS TAREAS HECHAS EN EL MODAL FORMULARIO-->
-
+<section id="taskTable">
+<!-- <table class="table" id="transactionTable">
+  <thead>
+    <tr>
+      <th>TASK Name😀</th>      
+      <th>SELECT STATE</th>
+      <th>DESCRIPTION</th> 
+      <th>ACTIONS</th>   
+    </tr>
+    
+    <tr>
+        <td>Programando a full😀</td>      
+        <td>en progreso</td>
+        <td>dandolo todo</td>   
+        <td>
+            <div class="buttons">
+                <button class="button is-primary edit">Editar</button>
+                <button class="button is-warning delete">Eliminar</button>
+                <div class="file is-small is-info is-right"> //upload button-->
+                    <!-- <label class="file-label">
+                      <input id="resume"class="file-input" type="file" name="resume"> <!--//upload button-->
+                      <!-- <span class="file-cta">
+                        <span class="file-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </span>
+                        <span class="file-label">
+                          upload file… -->
+                        <!-- </span>
+                      </span>
+                    </label>
+                  </div>
+              </div> 
+        </td>   
+      </tr>
+</thead> -->
+<!-- </table>  -->
 
 <!-- <section class="contain-tareas"">
           
@@ -120,29 +150,7 @@
 
 </section>    -->
 
-<section id="tableFormat">
-<table class="table" id="transactionTable">
-  <thead>
-    <tr>
-      <th>TASK Name😀</th>      
-      <th>SELECT STATE</th>
-      <th>DESCRIPTION</th> 
-      <th>ACTIONS</th>   
-    </tr>
-    
-    <tr>
-        <td>Programando a full😀</td>      
-        <td>en progreso</td>
-        <td>dandolo todo</td>   
-        <td>
-            <div class="buttons">
-                <button class="button is-primary edit">Primary</button>
-                <button class="button is-warning delete">Link</button>
-              </div> 
-        </td>   
-      </tr>
-</thead>
-</table>
+
 </section>
      <script src="./checkList.js"></script>
 
