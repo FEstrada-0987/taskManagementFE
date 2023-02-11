@@ -13,122 +13,121 @@
 <body id="darki">
     <!--Nav con bulma-->
 
-    <nav id="nav" class="navbar is-primary is-flex-mobile" role="navigation" aria-label="main navigation">
-            <div class="navbar-menu">
-            <div class="navbar-start">
-                 <h1 class="title is-flex-mobile">Task🤍</h1>             
-            </div>                             
+<nav id="nav" class="navbar is-primary is-flex-mobile" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <h1 class="title is-flex-mobile">Task🤍</h1>             
+        </div>                             
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
               </a>
-            </div>
-                     
+    </div>                 
 
-                           <button class="button is-danger is-rounded is-hovered is-flex-mobile" id="create-modal">Click Here🤍NewTask</button>
+    <button class="button is-danger is-rounded is-hovered is-flex-mobile" id="create-modal">Click Here🤍NewTask</button>
                             <!-- MODAL-FORMULARIO -->
-                                <form id="formModal"> 
-                                    <div class="modal">
-                                        <div class="modal-background"></div>
-                                        <div class="modal-content has-background-white py-5 px-5">
-                                
-                                                <div class="field">
-                                                    <label class="label">Task:Name😀</label>
-                                                    <div class="control"> <!--//Aca abajo el input para escrbir el nombre de la tarea-->
-                                                    <input id="task-Name"class="input is-danger" type="text" placeholder="e.g Meeting Leadership" name="nameTask">
-                                                    </div>
-                                                    <p class="help is-danger"> This field is required</p>
-                                                </div>               
-                                                
-                                
-                                                <div class="field">
-                                                    <label class="label">State your Task🚥</label>
-                                                    <div class="control">
-                                                    <div name="state" class="select">
-                                                        <select id="select-state"> <!--/tdas las opciones-->
-                                                        <option value="Select One">Select One</option>  
-                                                        <option value="To Do" id="toDo">To Do</option>
-                                                        <option value="In Progress" id="inProgress">In Progress</option>
-                                                        <option value="All Done" id="allDone">All Done</option>
-                                                        </select>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                        
-                                                <div class="field">
-                                                    <label class="label">Description Task✏️</label>
-                                                    <div class="control"><!--//ACA ABAJO el txt tarea para escribir-->
-                                                    <textarea id="description"name="Description" class="textarea" placeholder="1)Learnings and feedback"></textarea>
-                                                    </div>
-                                                </div>                   
-                                                
-                                        
-                                                <div class="field is-grouped">
-                                                    <div class="control">
-                                                        <button class="button is-link" id="createTask">Submit</button>
-                                                    </div>
-                                                    <div class="control">
-                                                        <button id="close-Modal"class="button is-link is-light">Cancel</button>
-                                                    </div>                                                    
-                                                </div>
-                                   
-                                        </div>
+        <form id="formModal"> 
+            <div class="modal">
+                <div class="modal-background"></div>
+                    <div class="modal-content has-background-white py-5 px-5">                                
+                        <div class="field">
+                            <label class="label">Task:Name😀</label>
+                            <div class="control"> <!--//Aca abajo el input para escrbir el nombre de la tarea-->
+                                <input id="task-Name"class="input is-danger" type="text" placeholder="e.g Meeting Leadership" name="nameTask">
+                            </div>
+                            <p class="help is-danger"> This field is required</p>
+                        </div>  
+                        <div class="field">
+                            <label class="label">State your Task🚥</label>
+                            <div class="control">
+                            <div name="state" class="select">
+                                <select id="select-state"> <!--/tdas las opciones-->
+                                        <option value="Select One">Select One</option>  
+                                        <option value="To Do" id="toDo">To Do</option>
+                                        <option value="In Progress" id="inProgress">In Progress</option>
+                                        <option value="All Done" id="allDone">All Done</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>      
+                        <div class="field">
+                            <label class="label">Description Task✏️</label>
+                                    <div class="control"><!--//ACA ABAJO el txt tarea para escribir-->
+                                      <textarea id="description"name="Description" class="textarea" placeholder="1)Learnings and feedback"></textarea>
                                     </div>
-                                </form>
-                            <!-- Hasta se CIERRA TODO el frmulario LO QUE ENGLOBA AL crear MODAL  <div>
-                                                        <button type="submit" class="submit">Edit</button>
-                                                    </div>-->
+                        </div>                   
+                        <div class="field is-grouped">
+                             <div class="control">
+                                    <button class="button is-link" id="createTask">Submit</button>
+                             </div>
+                            <div class="control">
+                                    <button id="close-Modal"class="button is-link is-light">Cancel</button>
+                            </div>                                                    
+                        </div>
+                </div>
+            </div>
+        </form>
+    <div class="navbar-end is-flex-mobile">
+        <div class="navbar-item is-flex-mobile">
+            <div class="buttons field is-grouped"> 
+                <p class="control">
+                <button class="navegacion-btn-switch active" id="switch" aria-label="Boton cambiar a modo oscuro">
+                    <span><i class="fa-solid fa-sun sol"></i></span> <!--MODOOSCURO-->
+                    <span><i class="fa-solid fa-moon luna"></i></span>   <!--MODOOSCURO-->                    
+                </button>  
+                </p>
+                <p class="control">                   
+                    <input id="search-Task"class="input is-warning" type="text" placeholder="Search your Task 💜"><!--INPUT BUSCAR TAREA-->
+                </p> 
+            </div>                     
+        </div>   <!--divs que cierran el navbar end-->
+    </div>            
+</nav>
 
+<section id="taskTable"></section>
 
-<!-- DIV PARA EDITAR MODAL DE aca para abajo-->
-<section class = "Contain-modalEdit"></section>
+<!-- ACA ABAJO modal edit-->
+
 <form id="formModal"> 
-    <div class="modal">
+    <div class="modal-edit">
         <div class="modal-background"></div>
-        <div class="modal-content has-background-white py-5 px-5">
-
+            <div class="modal-content has-background-white py-5 px-5">                                
                 <div class="field">
                     <label class="label">Task:Name😀</label>
                     <div class="control"> <!--//Aca abajo el input para escrbir el nombre de la tarea-->
-                    <input id="task-Name"class="input is-danger" type="text" placeholder="e.g Meeting Leadership" name="nameTask">
+                        <input id="task-Name"class="input is-danger" type="text" placeholder="e.g Meeting Leadership" name="nameTask">
                     </div>
                     <p class="help is-danger"> This field is required</p>
-                </div>               
-                
-
+                </div>  
                 <div class="field">
                     <label class="label">State your Task🚥</label>
                     <div class="control">
                     <div name="state" class="select">
                         <select id="select-state"> <!--/tdas las opciones-->
-                        <option value="Select One">Select One</option>  
-                        <option value="To Do" id="toDo">To Do</option>
-                        <option value="In Progress" id="inProgress">In Progress</option>
-                        <option value="All Done" id="allDone">All Done</option>
+                                <option value="Select One">Select One</option>  
+                                <option value="To Do" id="toDo">To Do</option>
+                                <option value="In Progress" id="inProgress">In Progress</option>
+                                <option value="All Done" id="allDone">All Done</option>
                         </select>
                     </div>
                     </div>
-                </div>
-        
+                </div>      
                 <div class="field">
                     <label class="label">Description Task✏️</label>
-                    <div class="control"><!--//ACA ABAJO el txt tarea para escribir-->
-                    <textarea id="description"name="Description" class="textarea" placeholder="1)Learnings and feedback"></textarea>
-                    </div>
+                            <div class="control"><!--//ACA ABAJO el txt tarea para escribir-->
+                              <textarea id="description"name="Description" class="textarea" placeholder="1)Learnings and feedback"></textarea>
+                            </div>
                 </div>                   
-                
-        
                 <div class="field is-grouped">
+                     <div class="control">
+                            <button class="button is-link" id="edit-Task">Submit</button>
+                     </div>
                     <div class="control">
-                        <button class="button is-link" id="createTask">Submit</button>
-                    </div>
-                    <div class="control">
-                        <button id="close-Modal"class="button is-link is-light">Cancel</button>
+                            <button id="close-edit"class="button is-link is-light">Cancel</button>
                     </div>                                                    
                 </div>
-   
         </div>
     </div>
 </form>
@@ -136,78 +135,6 @@
 
 
 
-
-
-                            <div class="navbar-end is-flex-mobile">
-                                <div class="navbar-item is-flex-mobile">
-                                    <div class="buttons field is-grouped"> 
-                                        <p class="control">
-                                            <button class="navegacion-btn-switch active" id="switch" aria-label="Boton cambiar a modo oscuro">
-                                                <span><i class="fa-solid fa-sun sol"></i></span> <!--MODOOSCURO-->
-                                                <span><i class="fa-solid fa-moon luna"></i></span>   <!--MODOOSCURO-->                    
-                                            </button>  
-                                         </p>
-                                        <p class="control">                   
-                                        <input id="search-Task"class="input is-warning" type="text" placeholder="Search your Task 💜"><!--INPUT BUSCAR TAREA-->
-                                        </p> 
-                                    </div>                     
-                                </div>   <!--divs que cierran el nav bar end-->
-                             </div> 
-           <!--divs que cierran el nav bar end-->
-</nav>
-<!-- ACA ABAJO CREAR LOS DIV PARA PINTAR LAS TAREAS HECHAS EN EL MODAL FORMULARIO-->
-<section id="taskTable">
-<!-- <table class="table" id="transactionTable">
-  <thead>
-    <tr>
-      <th>TASK Name😀</th>      
-      <th>SELECT STATE</th>
-      <th>DESCRIPTION</th> 
-      <th>ACTIONS</th>   
-    </tr>
-    
-    <tr>
-        <td>Programando a full😀</td>      
-        <td>en progreso</td>
-        <td>dandolo todo</td>   
-        <td>
-            <div class="buttons">
-                <button class="button is-primary edit">Editar</button>
-                <button class="button is-warning delete">Eliminar</button>
-                <div class="file is-small is-info is-right"> //upload button-->
-                    <!-- <label class="file-label">
-                      <input id="resume"class="file-input" type="file" name="resume"> <!--//upload button-->
-                      <!-- <span class="file-cta">
-                        <span class="file-icon">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                        </span>
-                        <span class="file-label">
-                          upload file… -->
-                        <!-- </span>
-                      </span>
-                    </label>
-                  </div>
-              </div> 
-        </td>   
-      </tr>
-</thead> -->
-<!-- </table>  -->
-
-<!-- <section class="contain-tareas"">
-          
-    <div class="columns is-mobile">
-        <div class="column">
-            <h1 class="title is-flex-mobile">TO DO</h1>
-        </div>
-        <div class="column">
-            <h1  class="title is-flex-mobile">IN PROGRESS</h1>
-        </div>
-        <div class="column">
-            <h1 class="title is-flex-mobile">COMPLETE</h1>
-        </div>  
-    </div>
-
-</section>    -->
 
 
 </section>
